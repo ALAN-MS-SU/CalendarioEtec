@@ -4,9 +4,14 @@
     {
         public App()
         {
+            
             InitializeComponent();
-
-            MainPage = new AppShell();
+            NavigationPage Navigation = new(new MainPage())
+            {
+                BarBackgroundColor = Colors.White,
+                BarTextColor = Colors.White
+            };
+            MainPage = Navigation;
         }
     }
 }
