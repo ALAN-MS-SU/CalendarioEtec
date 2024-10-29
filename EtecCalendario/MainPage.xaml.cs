@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit;
 namespace EtecCalendario
 {
-    public partial class MainPage : FlyoutPage
+    public partial class MainPage : ContentPage
     {
 
         public MainPage()
@@ -9,6 +9,7 @@ namespace EtecCalendario
             InitializeComponent();
           
         }
+        
     }
 
 }

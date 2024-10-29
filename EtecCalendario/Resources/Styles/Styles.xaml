@@ -4,6 +4,12 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     >
+    <Style TargetType="Label" x:Key="PrimaryTitle">
+        <Setter Property="TextColor" Value="{StaticResource Text-black}"/>
+        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+
+    </Style>
     <Style TargetType="Label" x:Key="PrimaryText">
         <Setter Property="TextColor" Value="{StaticResource Text-black}"/>
         <Setter Property="FontSize" Value="Medium" />
@@ -13,6 +19,9 @@
         <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
         <Setter Property="TextColor" Value="{StaticResource Text-white}"/>
         <Setter Property="FontSize" Value="Body"/>
+    </Style>
+    <Style TargetType="Entry">
+        <!--<Setter Property="" />-->
     </Style>
 
 </ResourceDictionary>

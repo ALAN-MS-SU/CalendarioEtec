@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EtecCalendario.pages.Login"
+             Title="Login">
+    <VerticalStackLayout WidthRequest="200" Spacing="50" Padding="0,100,0,0">
+        <Label Text="Entrar"  HorizontalOptions="Center" Style="{StaticResource PrimaryTitle}"/>
+        <Entry Placeholder="Email" x:Name="Email"/>
+        <Entry Placeholder="Senha" x:Name="Senha" IsPassword="True" />
+        <Button x:Name="botao_entrar" Clicked="botao_entrar_Clicked" Style="{StaticResource Button}" Text="Entrar"/>
+
+    </VerticalStackLayout>
+</ContentPage>
