@@ -121,8 +121,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="data\" />
-	  <Folder Include="pages\" />
+	  <MauiXaml Update="pages\ClassPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionEtecCalendarioHideInfoBar="True" /></VisualStudio></ProjectExtensions>
