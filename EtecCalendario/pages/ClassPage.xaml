@@ -3,17 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EtecCalendario.pages.ClassPage"
              Title="ClassPage">
-    <VerticalStackLayout>
-        <ListView ItemsSource="{Binding Dates}" BackgroundColor="Transparent" SelectedItem="Red">
+    <Grid RowDefinitions=".6*,8*,1*"  >
+        <Button x:Name="Back"  Clicked="Button_Clicked_1" Style="{StaticResource Button}" Text="Voltar" WidthRequest="100" HorizontalOptions="Start" Margin="10,0,0,0" />
+        
+        <VerticalStackLayout Grid.Row="1">
+        <ListView ItemsSource="{Binding Dates}" BackgroundColor="Transparent">
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <ViewCell>
-                        
-                    <Label Text="{Binding Subject}" Style="{StaticResource PrimaryText}" VerticalOptions="Center"/>
-                     </ViewCell>
+                        <Label Text="{Binding Subject}" Style="{StaticResource PrimaryText}" VerticalOptions="Center"/>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
-    
+       </VerticalStackLayout>
+        
+        <Button Grid.Row="2" HorizontalOptions="End" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" WidthRequest="70" Text="+" FontSize="40" FontAttributes="Bold" CornerRadius="50"/>
+            
+         
+    </Grid>
 </ContentPage>

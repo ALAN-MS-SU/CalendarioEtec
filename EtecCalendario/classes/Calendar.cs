@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace EtecCalendario.classes
 {
-    public class Calendar()
+    public class Calendar(string class_,string subject )
     {
-       public string Class { get; set; }
-       public string Subject { get; set; }
+        public string Class { get; set; } = class_;
+        public string Subject { get; set; } = subject;
        private List<DateCalendar> Dates = [];
 
        public void NewDate(DateCalendar data)

@@ -10,8 +10,7 @@ public partial  class ClassPage : ContentPage
 	{
 		
 		InitializeComponent();
-		Data.Calendars.Add(new Calendar { Class = "SURGE",Subject = "KITSUNAMI" });
-		//      Data.Calendars.Add(new Calendar("teste.svg", "BD"));
+		      //Data.Calendars.Add(new Calendar("teste.svg", "BD"));
 		//DisplayAlert("rfrf", $"{Data.Calendars[0].Class} / {Data.Calendars[0].Subject}","thyhyhyh");
 		this.Dates = new ObservableCollection<Calendar>();
 		foreach (var calendar in Data.Calendars)
@@ -20,4 +19,16 @@ public partial  class ClassPage : ContentPage
 		}
 		BindingContext = this;
 	}
+
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+		await Navigation.PushAsync(new NewClass());
+    }
+
+    private async void Button_Clicked_1(object sender, EventArgs e)
+    {
+		await Navigation.PopAsync();
+    }
+
+  
 }
