@@ -8,7 +8,10 @@ namespace EtecCalendario.classes
 {
     public class DateCalendar(DateTime day,string title)
     {
-       public DateTime Day = day;
-       public string Title = title;
+       public DateTime Day { get; set; } = day;
+       public string Title { get; set; } = title;
+
+
+
     }
 }

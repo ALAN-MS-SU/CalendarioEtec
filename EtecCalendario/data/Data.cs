@@ -8,7 +8,9 @@ namespace EtecCalendario.data
 {
     internal static class Data
     {
-        public static List<Calendar> Calendars = [];
+        public static readonly string DatesPath = $"{FileSystem.AppDataDirectory}/Dates.txt";
+
+        public static readonly string CalendarsPath = $"{FileSystem.AppDataDirectory}/Calendars.txt";
     }
 }
 

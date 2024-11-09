@@ -109,6 +109,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="data\desktop.ini" />
 	  <None Remove="Resources\AppIcon\appiconfg.svg" />
 	  <None Remove="Resources\Images\splash.svg" />
 	</ItemGroup>

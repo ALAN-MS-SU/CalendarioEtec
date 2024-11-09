@@ -4,22 +4,27 @@
              x:Class="EtecCalendario.pages.ClassPage"
              Title="ClassPage">
     <Grid RowDefinitions=".6*,8*,1*"  >
-        <Button x:Name="Back"  Clicked="Button_Clicked_1" Style="{StaticResource Button}" Text="Voltar" WidthRequest="100" HorizontalOptions="Start" Margin="10,0,0,0" />
-        
+        <Label Text="Seus calendarios" Grid.Row="0" HorizontalOptions="Center" Style="{StaticResource PrimaryTitle}" />
+        <Button x:Name="Back"  Clicked="Button_Clicked_1" Style="{StaticResource Button}" Text="Voltar" FontSize="Default" WidthRequest="70" HorizontalOptions="Start" Margin="10,0,0,0" />
+
         <VerticalStackLayout Grid.Row="1">
-        <ListView ItemsSource="{Binding Dates}" BackgroundColor="Transparent">
-            <ListView.ItemTemplate>
-                <DataTemplate >
-                    <ViewCell>
-                        <Label Text="{Binding Subject}" Style="{StaticResource PrimaryText}" VerticalOptions="Center"/>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-       </VerticalStackLayout>
-        
+            <ListView ItemsSource="{Binding Classes}" ItemTapped="list_Calendars_ItemTapped" x:Name="list_Calendars" >
+                <ListView.ItemTemplate>
+                    <DataTemplate  >
+                        <ViewCell>
+                            <Grid ColumnDefinitions="1*,1*" Padding="20,0,0,0" >
+                                <Label  Grid.Column="0"  Text="{Binding Class,StringFormat='Turma: {0} '}" Style="{StaticResource PrimaryText}" VerticalOptions="Center"/>
+                                <Label  Grid.Column="1"  Text="{Binding Subject,StringFormat='Matéria: {0} '}" Style="{StaticResource PrimaryText}" VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+
         <Button Grid.Row="2" HorizontalOptions="End" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" WidthRequest="70" Text="+" FontSize="40" FontAttributes="Bold" CornerRadius="50"/>
-            
-         
+
+
     </Grid>
 </ContentPage>

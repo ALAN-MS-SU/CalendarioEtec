@@ -4,12 +4,12 @@
              x:Class="EtecCalendario.pages.NewClass"
              Title="NewClass">
     <VerticalStackLayout >
-      
-            <Button x:Name="Back" Clicked="Button_Clicked" Style="{StaticResource Button}" Text="Voltar" WidthRequest="100" HorizontalOptions="Start" Margin="10,0,0,0" />
-       
+
+        <Button x:Name="Back" Clicked="Button_Clicked" Style="{StaticResource Button}" Text="Voltar" WidthRequest="100" HorizontalOptions="Start" Margin="10,0,0,0" />
+
         <VerticalStackLayout HorizontalOptions="FillAndExpand" >
-            <Entry Placeholder="Noma da Turma" x:Name="Nome" />
-            <Entry Placeholder="Matéria" x:Name="Materia" />
+            <Entry Placeholder="Noma da Turma" x:Name="Class" />
+            <Entry Placeholder="Matéria" x:Name="Subject" />
             <Button Style="{StaticResource Button}" Clicked="Button_Clicked_1" WidthRequest="100" Text="Criar" FontAttributes="Bold" Margin="00,50,0,0"/>
         </VerticalStackLayout>
     </VerticalStackLayout>

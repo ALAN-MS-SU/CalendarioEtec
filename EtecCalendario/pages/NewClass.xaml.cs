@@ -6,10 +6,10 @@ namespace EtecCalendario.pages;
 
 public partial class NewClass : ContentPage
 {
-	public NewClass()
-	{
-		InitializeComponent();
-	}
+    public NewClass()
+    {
+        InitializeComponent();
+    }
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
@@ -18,8 +18,13 @@ public partial class NewClass : ContentPage
 
     private async void Button_Clicked_1(object sender, EventArgs e)
     {
-       Data.Calendars.Add(new Calendar(Nome.Text,Materia.Text));
-       await Navigation.PushAsync(new ClassPage());
+        StreamWriter writer = new(Data.CalendarsPath,true);
+
+        writer.WriteLine($"{Class.Text}|{Subject.Text}");
+
+        writer.Close();
+        
+        await Navigation.PushAsync(new ClassPage());
 
     }
 }
