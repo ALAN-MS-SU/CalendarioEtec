@@ -20,7 +20,7 @@ public partial class NewClass : ContentPage
     {
         StreamWriter writer = new(Data.CalendarsPath,true);
 
-        writer.WriteLine($"{Class.Text}|{Subject.Text}");
+        writer.WriteLine($"{Guid.NewGuid()}|{Class.Text}|{Subject.Text}");
 
         writer.Close();
         

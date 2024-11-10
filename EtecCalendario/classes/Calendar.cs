@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace EtecCalendario.classes
 {
-    public class Calendar(string class_,string subject )
+    public class Calendar(string id, string class_,string subject )
     {
+        public readonly string ID = id;
         public string Class { get; set; } = class_;
         public string Subject { get; set; } = subject;
 

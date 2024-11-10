@@ -1,4 +1,5 @@
-﻿namespace EtecCalendario
+﻿using EtecCalendario.pages;
+namespace EtecCalendario
 {
     public partial class App : Application
     {
@@ -6,7 +7,7 @@
         {
             
             InitializeComponent();
-            NavigationPage Navigation = new(new MainPage())
+            NavigationPage Navigation = new(new ClassPage())
             {
                 BarBackgroundColor = Colors.White,
                 BarTextColor = Colors.White

@@ -1,6 +1,7 @@
 using EtecCalendario.classes;
 using System.Collections.ObjectModel;
 using EtecCalendario.data;
+using CommunityToolkit;
 namespace EtecCalendario.pages;
 
 public partial class ClassPage : ContentPage
@@ -16,18 +17,23 @@ public partial class ClassPage : ContentPage
         //StreamWriter writer = new(Calendar.CalendarsPath,true);
 
 
-       // writer.Close();
+        // writer.Close();
 
         //writer.WriteLine("SURGE");
         //File.Delete($"{FileSystem.AppDataDirectory}/data.txt");
 
         //foreach (var calendar in Data.Calendars)
-        //{
-        string[] data = File.ReadAllLines($"{FileSystem.AppDataDirectory}/Calendars.txt");
-        foreach (var calendar in data)
+        //{}
+        if (File.Exists(Data.CalendarsPath))
+        {
+            string[] data = File.ReadAllLines(Data.CalendarsPath);
+            foreach (var calendar in data)
+            {
+                var split = calendar.Split("|");
+                this.Classes.Add(new Calendar(split[0], split[1], split[2]));
+            }
+        }
 
-            this.Classes.Add(new Calendar(calendar.Split("|")[0], calendar.Split("|")[1]));
-        //}
         BindingContext = this;
     }
 
@@ -41,8 +47,10 @@ public partial class ClassPage : ContentPage
         await Navigation.PopAsync();
     }
 
-    private void list_Calendars_ItemTapped(object sender, ItemTappedEventArgs e)
+    private async void list_Calendars_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-
+        var view = e.Item as Calendar;
+        
+        await Navigation.PushAsync(new DatesPage(view));
     }
 }

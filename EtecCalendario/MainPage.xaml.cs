@@ -15,7 +15,7 @@ namespace EtecCalendario
             //StreamWriter teste = new($"{FileSystem.AppDataDirectory}/data.txt");
             //teste.WriteLine("SURGE");
             //teste.Close();
-            File.Delete($"{FileSystem.AppDataDirectory}/data.txt");
+           // File.Delete($"{FileSystem.AppDataDirectory}/Calendars.txt");
 
 
         }
