@@ -17,10 +17,10 @@
             <ListView ItemsSource="{Binding Classes}" ItemTapped="list_Calendars_ItemTapped" x:Name="list_Calendars" >
                 <ListView.ItemTemplate>
                     <DataTemplate  >
-                        <ViewCell ClassId="{Binding ID}" x:Name="Class_View">
-                            <Grid ColumnDefinitions="1*,1*" Padding="20,0,0,0" >
-                                <Label  x:Name="Class" ClassId="{Binding Class}"  Grid.Column="0"  Text="{Binding Class,StringFormat='Turma: {0} '}" Style="{StaticResource PrimaryText}" VerticalOptions="Center"/>
-                                <Label x:Name="Subject" ClassId="{Binding Subject}"   Grid.Column="1"  Text="{Binding Subject,StringFormat='Matéria: {0} '}" Style="{StaticResource PrimaryText}" VerticalOptions="Center"/>
+                        <ViewCell  x:Name="Class_View">
+                            <Grid ColumnDefinitions="1*,1*" Padding="20,0,0,0"  >
+                                <Label    Grid.Column="0" VerticalOptions="Center"  Text="{Binding Class,StringFormat='Turma: {0} '}" Style="{StaticResource PrimaryText}" />
+                                <Label   Grid.Column="1" VerticalOptions="Center"  Text="{Binding Subject,StringFormat='Matéria: {0} '}" Style="{StaticResource PrimaryText}" />
                             </Grid>
                         </ViewCell>
 
@@ -29,7 +29,7 @@
             </ListView>
         </VerticalStackLayout>
 
-        <Button Grid.Row="2" HorizontalOptions="End" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" WidthRequest="70" Text="+" FontSize="40" FontAttributes="Bold" CornerRadius="50"/>
+        <Button Grid.Row="2" HorizontalOptions="End" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" WidthRequest="80" Text="+" FontSize="40" FontAttributes="Bold" CornerRadius="50"/>
 
 
     </Grid>

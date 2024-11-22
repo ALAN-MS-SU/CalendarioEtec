@@ -15,10 +15,6 @@ namespace EtecCalendario.classes
 
         private readonly List<DateCalendar> Dates = [];
 
-        public static readonly string CalendarsPath = $"{FileSystem.AppDataDirectory}/Calendars.txt";
-
-        //private readonly StreamReader Read = new("./data.text");
-
         public bool NewDate(DateCalendar data)
         {
             try
@@ -31,7 +27,6 @@ namespace EtecCalendario.classes
 
                 return false;
             }
-            //this.Dates.Add(data);
         }
        public void DeleteDate(DateCalendar data)
         {
@@ -54,10 +49,5 @@ namespace EtecCalendario.classes
                 }
             }
         }
-        //public string GetAllDates()
-        //{
-            
-        //    return Read.ReadLine() ?? "Nada";
-        //}
     }
 }

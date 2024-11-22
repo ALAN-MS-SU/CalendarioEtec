@@ -18,13 +18,15 @@ public partial class NewClass : ContentPage
 
     private async void Button_Clicked_1(object sender, EventArgs e)
     {
-        StreamWriter writer = new(Data.CalendarsPath,true);
+        if (!string.IsNullOrEmpty(Class.Text) && !string.IsNullOrEmpty(Subject.Text))
+        {
+            StreamWriter writer = new(Data.CalendarsPath, true);
 
-        writer.WriteLine($"{Guid.NewGuid()}|{Class.Text}|{Subject.Text}");
+            writer.WriteLine($"{Guid.NewGuid()}|{Class.Text}|{Subject.Text}");
 
-        writer.Close();
-        
-        await Navigation.PushAsync(new ClassPage());
+            writer.Close();
 
+            await Navigation.PushAsync(new ClassPage());
+        }
     }
 }

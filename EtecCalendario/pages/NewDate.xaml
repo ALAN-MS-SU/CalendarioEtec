@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EtecCalendario.pages.NewDate"
+             Title="NewDate">
+    <VerticalStackLayout>
+        <Button x:Name="Back" FontSize="Default" Clicked="Back_Clicked" HeightRequest="45" Style="{StaticResource Button}" Text="Voltar" WidthRequest="70" HorizontalOptions="Start" Margin="10,0,0,0" />
+
+        <VerticalStackLayout HorizontalOptions="FillAndExpand" >
+            <DatePicker Format="dd/MMMM/yyyy" x:Name="Date" />
+            <Entry Placeholder="Descrição" x:Name="Subject" />
+            <Button Style="{StaticResource Button}" Clicked="Button_Clicked" WidthRequest="100" Text="Criar" FontAttributes="Bold" Margin="00,50,0,0"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

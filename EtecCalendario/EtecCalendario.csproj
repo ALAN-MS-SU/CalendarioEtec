@@ -57,36 +57,42 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="data\NovaPasta\**" />
 	  <AndroidResource Remove="NovaPasta1\**" />
 	  <AndroidResource Remove="NovaPasta2\**" />
 	  <AndroidResource Remove="NovaPasta\**" />
 	  <AndroidResource Remove="pages\NovaPasta1\**" />
 	  <AndroidResource Remove="pages\NovaPasta2\**" />
 	  <AndroidResource Remove="pages\NovaPasta\**" />
+	  <Compile Remove="data\NovaPasta\**" />
 	  <Compile Remove="NovaPasta1\**" />
 	  <Compile Remove="NovaPasta2\**" />
 	  <Compile Remove="NovaPasta\**" />
 	  <Compile Remove="pages\NovaPasta1\**" />
 	  <Compile Remove="pages\NovaPasta2\**" />
 	  <Compile Remove="pages\NovaPasta\**" />
+	  <EmbeddedResource Remove="data\NovaPasta\**" />
 	  <EmbeddedResource Remove="NovaPasta1\**" />
 	  <EmbeddedResource Remove="NovaPasta2\**" />
 	  <EmbeddedResource Remove="NovaPasta\**" />
 	  <EmbeddedResource Remove="pages\NovaPasta1\**" />
 	  <EmbeddedResource Remove="pages\NovaPasta2\**" />
 	  <EmbeddedResource Remove="pages\NovaPasta\**" />
+	  <MauiCss Remove="data\NovaPasta\**" />
 	  <MauiCss Remove="NovaPasta1\**" />
 	  <MauiCss Remove="NovaPasta2\**" />
 	  <MauiCss Remove="NovaPasta\**" />
 	  <MauiCss Remove="pages\NovaPasta1\**" />
 	  <MauiCss Remove="pages\NovaPasta2\**" />
 	  <MauiCss Remove="pages\NovaPasta\**" />
+	  <MauiXaml Remove="data\NovaPasta\**" />
 	  <MauiXaml Remove="NovaPasta1\**" />
 	  <MauiXaml Remove="NovaPasta2\**" />
 	  <MauiXaml Remove="NovaPasta\**" />
 	  <MauiXaml Remove="pages\NovaPasta1\**" />
 	  <MauiXaml Remove="pages\NovaPasta2\**" />
 	  <MauiXaml Remove="pages\NovaPasta\**" />
+	  <None Remove="data\NovaPasta\**" />
 	  <None Remove="NovaPasta1\**" />
 	  <None Remove="NovaPasta2\**" />
 	  <None Remove="NovaPasta\**" />
@@ -126,6 +132,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="pages\DatesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="pages\NewDate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
