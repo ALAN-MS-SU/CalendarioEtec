@@ -1,6 +1,5 @@
 using EtecCalendario.classes;
 using System.Collections.ObjectModel;
-using EtecCalendario.data;
 namespace EtecCalendario.pages;
 
 public partial class ClassPage : ContentPage
@@ -13,9 +12,9 @@ public partial class ClassPage : ContentPage
         InitializeComponent();
         
         this.Classes = [];
-        if (File.Exists(Data.CalendarsPath))
+        if (File.Exists(Calendar.CalendarsPath))
         {
-            string[] data = File.ReadAllLines(Data.CalendarsPath);
+            string[] data = File.ReadAllLines(Calendar.CalendarsPath);
             foreach (var calendar in data)
             {
                 var split = calendar.Split("|");

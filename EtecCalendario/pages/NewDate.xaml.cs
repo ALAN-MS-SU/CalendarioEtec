@@ -1,4 +1,3 @@
-using EtecCalendario.data;
 using EtecCalendario.classes;
 namespace EtecCalendario.pages;
 
@@ -20,7 +19,7 @@ public partial class NewDate : ContentPage
     {
         if (!string.IsNullOrEmpty(this.Calendar.ID) && !string.IsNullOrEmpty(Date.Date.ToString()) && !string.IsNullOrEmpty(Subject.Text))
         {
-            StreamWriter writer = new(Data.DatesPath, true);
+            StreamWriter writer = new(DateCalendar.DatesPath, true);
             writer.WriteLine($"{this.Calendar.ID}|{Date.Date}|{Subject.Text}");
             writer.Close();
             await Navigation.PushAsync(new DatesPage(this.Calendar));

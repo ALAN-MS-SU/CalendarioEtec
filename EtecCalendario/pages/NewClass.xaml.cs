@@ -1,6 +1,3 @@
-using EtecCalendario.data;
-
-
 using EtecCalendario.classes;
 namespace EtecCalendario.pages;
 
@@ -20,7 +17,7 @@ public partial class NewClass : ContentPage
     {
         if (!string.IsNullOrEmpty(Class.Text) && !string.IsNullOrEmpty(Subject.Text))
         {
-            StreamWriter writer = new(Data.CalendarsPath, true);
+            StreamWriter writer = new(Calendar.CalendarsPath, true);
 
             writer.WriteLine($"{Guid.NewGuid()}|{Class.Text}|{Subject.Text}");
 
