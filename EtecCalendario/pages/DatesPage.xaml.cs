@@ -39,8 +39,7 @@ public partial class DatesPage : ContentPage
     private async void Delet_Date(DateCalendar Date)
     {
 
-        string g = DateCalendar.Delet_Date(Date);
-        await DisplayAlert("lop", g, "juki");
+        DateCalendar.Delet_Date(Date);
         await Navigation.PushAsync(new DatesPage(Calendar));
     }
     private async void Back_Clicked(object sender, EventArgs e)
@@ -52,5 +51,11 @@ public partial class DatesPage : ContentPage
     private async void Button_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new NewDate(this.Calendar));
+    }
+
+    private async void Button_Clicked_1(object sender, EventArgs e)
+    {
+        Calendar.Delete_Calendar(Calendar);
+        await Navigation.PushAsync(new ClassPage());
     }
 }

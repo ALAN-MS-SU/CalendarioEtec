@@ -7,15 +7,6 @@
              
              
              >
-
-    <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior x:Name="Barra" StatusBarColor="{StaticResource Primary}" />
-    </ContentPage.Behaviors>
-    <VerticalStackLayout Spacing="50" >
-        <Label Text="Bem-Vindo"  HorizontalOptions="Center" Style="{StaticResource PrimaryTitle}"/>
-        <Button Style="{StaticResource Button}" x:Name="ClassButton" Clicked="ClassButton_Clicked"
-                Text="Turmas" WidthRequest="150" />
-        <Button Style="{StaticResource Button}" Text="Calendarios" WidthRequest="150" />
-        
-    </VerticalStackLayout>
 </ContentPage>
+
+    

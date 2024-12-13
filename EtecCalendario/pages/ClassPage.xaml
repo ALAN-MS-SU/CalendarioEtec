@@ -11,16 +11,16 @@
     </ContentPage.Behaviors>
     <Grid RowDefinitions=".6*,8*,1*"  >
         <Label Text="Seus calendarios" Grid.Row="0" HorizontalOptions="Center" Style="{StaticResource PrimaryTitle}" />
-        <!--<Button x:Name="Back"  Clicked="Button_Clicked_1" Style="{StaticResource Button}" Text="Voltar" FontSize="Default" WidthRequest="70" HeightRequest="45" HorizontalOptions="Start" Margin="10,0,0,0" />-->
+        
 
         <VerticalStackLayout Grid.Row="1" Margin="0,20,0,0">
             <ListView ItemsSource="{Binding Classes}" ItemTapped="list_Calendars_ItemTapped" x:Name="list_Calendars" >
                 <ListView.ItemTemplate>
                     <DataTemplate  >
                         <ViewCell  x:Name="Class_View">
-                            <Grid ColumnDefinitions="1*,1*" Padding="20,0,0,0"  >
-                                <Label    Grid.Column="0" VerticalOptions="Center"  Text="{Binding Class,StringFormat='Turma: {0} '}" Style="{StaticResource PrimaryText}" />
-                                <Label   Grid.Column="1" VerticalOptions="Center"  Text="{Binding Subject,StringFormat='Matéria: {0} '}" Style="{StaticResource PrimaryText}" />
+                            <Grid ColumnDefinitions="1*,1*" Padding="20,0,0,0" RowDefinitions="2*,1*" >
+                                <Label    Grid.Column="0" Grid.Row="0" VerticalOptions="Center"  Text="{Binding Class,StringFormat='Turma: {0} '}" Style="{StaticResource PrimaryText}" />
+                                <Label   Grid.Column="1"  Grid.Row="0" VerticalOptions="Center"  Text="{Binding Subject,StringFormat='Matéria: {0} '}" Style="{StaticResource PrimaryText}" />
                             </Grid>
                         </ViewCell>
 

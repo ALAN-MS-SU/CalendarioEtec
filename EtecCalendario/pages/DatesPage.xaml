@@ -23,6 +23,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Grid.Row="2" Grid.Column="3" Clicked="Button_Clicked" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" WidthRequest="80" Text="+" FontSize="40" FontAttributes="Bold" CornerRadius="50"/>
+        <Button Grid.Row="2" Margin="10,0,0,10"  Clicked="Button_Clicked_1" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" BackgroundColor="Red" Text="Deletar" FontSize="20" FontAttributes="Bold" />
+        <Button Grid.Row="2" Margin="10,0,10,10"  Clicked="Button_Clicked" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}"  Text="+" FontSize="40" WidthRequest="75" FontAttributes="Bold" CornerRadius="50"/>
     </Grid>
 </ContentPage>
