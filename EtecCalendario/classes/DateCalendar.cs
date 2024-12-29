@@ -18,37 +18,40 @@ public class DateCalendar(DateTime day, string title)
 
     public static void Delet_Date(DateCalendar? date_delet = null, string? id = null)
     {
-
-        List<string> file = File.ReadAllLines(DatesPath).ToList();
-        StreamWriter writer = new(DatesPath, false);
-        if (id == null && date_delet != null)
+        if (File.Exists(DatesPath))
         {
-            foreach (string date in file)
+            List<string> file = File.ReadAllLines(DatesPath).ToList();
+            StreamWriter writer = new(DatesPath, false);
+            if (id == null && date_delet != null)
             {
-                string[] split = date.Split("|");
-
-                if (split[1] != date_delet.ToString() && split[2] != date_delet.Title)
+                foreach (string date in file)
                 {
-                    writer.WriteLine(date);
-                }
+                    string[] split = date.Split("|");
 
+                    if (split[1] != date_delet.ToString() && split[2] != date_delet.Title)
+                    {
+                        writer.WriteLine(date);
+                    }
+
+                }
             }
-        }
-        if (id != null && date_delet == null)
-        {
-            foreach (string date in file)
+            if (id != null && date_delet == null)
             {
-                string[] split = date.Split("|");
-
-                if (split[0] != id)
+                foreach (string date in file)
                 {
-                    writer.WriteLine(date);
+                    string[] split = date.Split("|");
+
+                    if (split[0] != id)
+                    {
+                        writer.WriteLine(date);
+                    }
+
                 }
-
             }
-        }
 
-        writer.Close();
+            writer.Close();
+
+        }
 
     }
 }

@@ -19,7 +19,9 @@ public class Calendar(string id, string class_, string subject)
     
     public static void Delete_Calendar(Calendar Calendar_Delet)
     {
-        List<string> file = File.ReadAllLines(CalendarsPath).ToList();
+        if (File.Exists(CalendarsPath))
+        {
+            List<string> file = File.ReadAllLines(CalendarsPath).ToList();
         StreamWriter writer = new(CalendarsPath,false);
         foreach (string calendar in file)
         {
@@ -36,4 +38,6 @@ public class Calendar(string id, string class_, string subject)
         writer.Close();
 
     }
+        }
+        
 }

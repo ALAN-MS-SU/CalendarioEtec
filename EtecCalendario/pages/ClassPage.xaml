@@ -29,7 +29,7 @@
             </ListView>
         </VerticalStackLayout>
 
-        <Button Grid.Row="2" HorizontalOptions="End" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" WidthRequest="80" Text="+" FontSize="40" FontAttributes="Bold" CornerRadius="50"/>
+        <Button Grid.Row="2" HorizontalOptions="End" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="10,100" AbsoluteLayout.LayoutFlags="None" Style="{StaticResource Button}" WidthRequest="60" Text="+" Margin="5" FontSize="30" FontAttributes="Bold" CornerRadius="100"/>
 
 
     </Grid>
