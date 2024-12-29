@@ -4,7 +4,7 @@
              x:Class="EtecCalendario.pages.NewDate"
              Title="NewDate">
     <VerticalStackLayout>
-        <Button x:Name="Back" FontSize="Default" Clicked="Back_Clicked" HeightRequest="45" Style="{StaticResource Button}" Text="Voltar" WidthRequest="100" HorizontalOptions="Start" Margin="10,0,0,0" />
+        <Button x:Name="Back" FontSize="Default" Clicked="Back_Clicked" HeightRequest="45" Style="{StaticResource Button}" Text="Voltar" WidthRequest="85" HorizontalOptions="Start" Margin="10,0,0,0" />
 
         <VerticalStackLayout HorizontalOptions="FillAndExpand" >
             <DatePicker Format="dd/MMMM/yyyy" x:Name="Date" />

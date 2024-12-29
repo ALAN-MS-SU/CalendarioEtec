@@ -5,10 +5,10 @@
              xmlns:local="clr-namespace:EtecCalendario.pages"
              Title="DatesPage">
     <Grid RowDefinitions=".6*,8*,1*" >
-        <Button Grid.Row="0" Grid.Column="0" x:Name="Back" Clicked="Back_Clicked" Style="{StaticResource Button}" Text="Voltar" FontSize="Default" WidthRequest="70" HeightRequest="45" HorizontalOptions="Start" Margin="10,0,0,0" />
+        <Button Grid.Row="0" Grid.Column="0" x:Name="Back" Clicked="Back_Clicked" Style="{StaticResource Button}" Text="Voltar" FontSize="Default" WidthRequest="85" HeightRequest="45" HorizontalOptions="Start" Margin="10,0,0,0" />
         <VerticalStackLayout Grid.Row="0" HorizontalOptions="Center" >
-            <Label  VerticalOptions="Center"  FontSize="Medium" Text="{Binding Calendar.Class,StringFormat='Turma: {0}'}"   Style="{StaticResource PrimaryTitle}"/>
-            <Label  VerticalOptions="Center"  FontSize="Medium" Text="{Binding Calendar.Subject,StringFormat='Matéria: {0}'}"   Style="{StaticResource PrimaryTitle}"/>
+            <Label  VerticalOptions="Center" Margin="30,0,0,0"  FontSize="Medium" Text="{Binding Calendar.Class,StringFormat='Turma: {0}'}"   Style="{StaticResource PrimaryTitle}"/>
+            <Label  VerticalOptions="Center" Margin="30,0,0,0" FontSize="Medium" Text="{Binding Calendar.Subject,StringFormat='Matéria: {0}'}"   Style="{StaticResource PrimaryTitle}"/>
         </VerticalStackLayout>
         <CollectionView Grid.Row="1" ItemsSource="{Binding Dates}"  >
             <CollectionView.ItemTemplate>
