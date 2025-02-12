@@ -12,6 +12,10 @@
     <h3>Use <a href="https://dotnet.microsoft.com/pt-br/download/dotnet-framework">.NET</a> v8</h3>
   </li>
   <li>
+    <h3>Git clone</h3>
+    <pre><code>git clone https://github.com/ALAN-MS-SU/CalendarioEtec.git</code></pre>
+  </li>
+  <li>
     <h3>Open the project solution in Visual Studio</h3>
   </li>
   <li>
